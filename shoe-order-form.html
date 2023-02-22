@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../../css/styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+
+        <title>Order Form</title>
+        
+        <meta name="description" content="Application for maintaining special orders.  This was modeled after a run-store order form by converting it from a paper form to electronic." />
+        <meta name="keywords" content="order form, shoe order form, running, run, special order, special orders" />
+        <meta name="author" content="Kyle M Krisher" />
+        
+        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+        
+        <!-- load JQuery library from google-->
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+        
+<!--        load JQuery development library -->
+<!--        <script src="E:\OneDrive\Software\Portfolio Website\projects\shoe-order-form\js\jquery-3.6.0.js"></script>-->
+        
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="head">
+            
+                <nav class="nav-menu">
+                    
+                    <!-- Put these in an ul and float -->
+                
+                    <a href="../../index.html" title="Home" class="btn btn-home">Home</a>
+                    <a href="bio/index.html" title="Bio" class="btn btn-bio">Bio</a>
+                    <a href="#" title="Projects" class="btn btn-projects">Projects</a>
+                    <a href="#" title="Blog" class="btn btn-blog">Blog</a>
+                
+                </nav>
+                
+                
+                
+            </header>
+            
+            <main>
+                <div class="order-form">
+                    <input type="text" class="add-customer-first-name input-field" placeholder="Customer's first name" />
+
+                    <input type="text" class="add-customer-last-name input-field" placeholder="Customer's last name" />
+
+                    <input type="text" class="add-customer-phone-number input-field" placeholder="Customer's phone number" />
+
+                    <input type="date" class="add-date-requested input-field" />
+
+                    <input type="text" class="add-brand input-field" placeholder="Brand" />
+
+                    <input type="text" class="add-style input-field" placeholder="Style" />
+
+                    <input type="text" class="add-style-number input-field" placeholder="Style number" />
+
+                    <input type="text" class="add-color input-field" placeholder="Color" />
+
+                    <input type="text" class="add-color-code input-field" placeholder="Color code" />
+
+                    <input type="text" class="add-employee-name input-field" placeholder="Employee's name" />
+
+                    <input type="text" class="add-order-number input-field" placeholder="PO number" />
+                    
+                    <input type="radio" class="add-order-prepaid input-field" id="yes" name="prepaid-order" value="yes" />
+                    <label for="yes" class="add-order-prepaid">Yes</label>
+
+                    <input type="radio" class="add-order-prepaid input-field" id="no" name="prepaid-order" value="no" checked />
+                    <label for="no" class="add-order-prepaid">No</label>
+                    
+                    <input type="text" class="add-notes input-field" placeholder="Notes" />
+
+                    <button class="inputBtn" type="submit" value="Add Order">Add Order</button>
+
+
+                </div>
+                
+                <div class="filter-container">
+                    
+                    <label for="filter-1">Filter by:</label>
+                    <select name="filter-1" id="filter-1" class="drop-down">
+                        <option value="none">All Fields</option>
+                        <option value="first-name">First Name</option>
+                        <option value="last-name">Last Name</option>
+                        <option value="phone-number">Phone Number</option>
+                        <option value="date-requested">Date Requested</option>
+                        <option value="brand">Brand</option>
+                        <option value="style">Style</option>
+                        <option value="style-number">Style Number</option>
+                        <option value="color">Style Color</option>
+                        <option value="color-code">Color Code</option>
+                        <option value="emp-name">Employee</option>
+                        <option value="PO-number">PO Number</option>
+                        <option value="prepaid">Prepaid</option>
+                        <option value="notes">Notes</option>
+                    </select>
+                
+                </div>
+                
+                <div class="search-container">
+                
+                    <input type="text" class="search input-field" placeholder="type to search" />
+                
+                </div>
+                    
+                <table class="order-list">
+                    <tr class="order-head clearfix" id="0">
+                        <th class="cust-order-last-name" id="last-name">Last Name</th>
+                        <th class="cust-order-first-name" id="first-name">First Name</th>
+                        <th class="cust-order-phone-number" id="phone-number">Phone Number</th>
+                        <th class="order-date-requested" id="date-requested">Date Requested</th>
+                        <th class="order-brand" id="brand">Brand</th>
+                        <th class="order-style" id="style">Style</th>
+                        <th class="order-style-number" id="style-number">Style Number</th>
+                        <th class="order-color" id="color">Style Color</th>
+                        <th class="order-color-number" id="color-code">Color Code</th>
+                        <th class="order-employee-name" id="emp-name">Employee</th>
+                        <th class="order-number" id="PO-number">PO Number</th>
+                        <th class="order-prepaid" id="prepaid">Prepaid</th>
+                        <th class="order-notes" id="notes">Notes</th>
+                        <th class="delete-order">Delete</th>
+                    </tr>
+                    
+<!--
+                    <tr class="order clearfix" id="1"><td class="cust-order-last-name">Smith</td><td class="cust-order-first-name">John</td><td class="cust-order-phone-number">217-555-0123</td><td class="order-date-requested">2021-01-24</td><td class="order-brand">Hoka</td><td class="order-style">Clifton</td><td class="order-style-number">123</td><td class="order-color">Orange</td><td class="order-color-number">BHBI</td><td class="order-employee-name">Kyle</td><td class="order-number">john1.24kk</td><td class="order-prepaid">no</td><td class="order-notes">some notes</td><td class="delete-order"><button class="delete-order-btn"><ion-icon name="close-circle-outline" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon></button></td></tr>
+                    
+                    <tr class="order clearfix" id="2"><td class="cust-order-last-name">Nunez</td><td class="cust-order-first-name">Adam</td><td class="cust-order-phone-number">423-555-7845</td><td class="order-date-requested">2021-02-24</td><td class="order-brand">Brooks</td><td class="order-style">Glycerin</td><td class="order-style-number">154-23</td><td class="order-color">Slate</td><td class="order-color-number">051</td><td class="order-employee-name">Cayla</td><td class="order-number">Adam2.25mc</td><td class="order-prepaid">yes</td><td class="order-notes">more notes</td><td class="delete-order"><button class="delete-order-btn"><ion-icon name="close-circle-outline" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon></button></td></tr>
+-->                    
+                </table>
+
+            </main>
+        </div>
+    
+    <script src="js/scripts.js"></script>
+
+    </body>
+
+
+</html>
